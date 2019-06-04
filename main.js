@@ -132,7 +132,10 @@ for (let j = 0; j < foods.length; j++) {
   grill(foods[j]);
 }
 
-console.log(cookedFood);
+// console.log(cookedFood);
+
+
+
 
 
 
