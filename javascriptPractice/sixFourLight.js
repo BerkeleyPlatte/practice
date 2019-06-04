@@ -33,4 +33,16 @@ function petAssign(dogBreed) {
   }
 }
 
-petAssign();
+// petAssign();
+
+const pet = {
+  name: "Murphis",
+  species: "Aussie mix",
+  nicknames: ["mruph", "poochie", "mr. fuzzy"],
+  age: 4,
+  goOut: function(action) {
+    console.log(`${this.name} wants to go out and ${action}`);
+  }
+};
+
+pet.goOut("pee");
