@@ -25,7 +25,7 @@ function addExcitement(theWordArray) {
 
   for (let i = 0; i < theWordArray.length; i++) {
     // Concatenate the new word onto buildMeUp
-    buildMeUp += theWordArray[i];
+    buildMeUp += (" " + theWordArray[i]);
     // Print buildMeUp to the console
     console.log(buildMeUp);
   }
