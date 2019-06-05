@@ -216,22 +216,43 @@ const students = [
   }
 ];
 
-students.forEach(function(student) {
-  if (student.score >= 60) {
+// students.forEach(function(student) {
+//   if (student.score >= 60) {
+//     document.querySelector("#family").innerHTML += `<div class="student">
+//         <h1 class="xx-large passing">${student.name}</h1>
+//         <section class="bordered dashed section--padded">${
+//           student.subject
+//         }</section>
+//         <aside class="pushRight">${student.info}</aside>
+//     </div>`;
+//   } else {
+//     document.querySelector("#family").innerHTML += `<div class="student">
+//     <h1 class="xx-large failing">${student.name}</h1>
+//     <section class="bordered dashed section--padded">${
+//       student.subject
+//     }</section>
+//     <aside class="pushRight">${"Future inhabitant of a van down by the river"}</aside>
+// </div>`;
+//   }
+// });
+
+for (let i = 0; i < students.length; i++) {
+  if (students[i].score >= 60) {
     document.querySelector("#family").innerHTML += `<div class="student">
-        <h1 class="xx-large passing">${student.name}</h1>
+        <h1 class="xx-large passing">${students[i].name}</h1>
         <section class="bordered dashed section--padded">${
-          student.subject
+          students[i].subject
         }</section>
-        <aside class="pushRight">${student.info}</aside>
+        <aside class="pushRight">${students[i].info}</aside>
     </div>`;
-  } else if (student.score < 60) {
+  } else {
     document.querySelector("#family").innerHTML += `<div class="student">
-    <h1 class="xx-large failing">${student.name}</h1>
+    <h1 class="xx-large failing">${students[i].name}</h1>
     <section class="bordered dashed section--padded">${
-      student.subject
+      students[i].subject
     }</section>
     <aside class="pushRight">${"Future inhabitant of a van down by the river"}</aside>
 </div>`;
   }
-});
+}
+
